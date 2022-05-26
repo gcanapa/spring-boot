@@ -11,7 +11,6 @@ public interface UserRepository extends JpaRepository<User, Long>{
     
     @Query("SELECT u from User u where u.id > :id")
     public List<User> findAllMoreThan(@Param("id") Long id);
-
     //Aqui ele está fazendo o mesmo select que a query de cima 
     public List<User> findByIdGreaterThan(Long id);
     //Aqui está fazendo um select baseado no nome passado na url
